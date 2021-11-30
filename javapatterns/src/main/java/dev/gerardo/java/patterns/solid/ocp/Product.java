@@ -10,4 +10,9 @@ public class Product {
     this.color = color;
     this.size = size;
   }
+
+  @Override
+  public String toString() {
+    return "Product{name: " + name +  ", color: " + color + ", size: " + size + "}";
+  }
 }

@@ -4,12 +4,14 @@ package dev.gerardo.java.patterns;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import dev.gerardo.java.patterns.solid.ocp.AndSpecification;
 import dev.gerardo.java.patterns.solid.ocp.BetterFilter;
 import dev.gerardo.java.patterns.solid.ocp.Color;
 import dev.gerardo.java.patterns.solid.ocp.ColorSpecification;
 import dev.gerardo.java.patterns.solid.ocp.Product;
 import dev.gerardo.java.patterns.solid.ocp.ProductFilter;
 import dev.gerardo.java.patterns.solid.ocp.Size;
+import dev.gerardo.java.patterns.solid.ocp.SizeSpecialisation;
 
 /**
  * Hello world!
@@ -40,5 +42,11 @@ public class App {
         System.out.println("Green objects (new)");
         BetterFilter filter = new BetterFilter();
         System.out.println(filter.filter(products, new ColorSpecification(Color.GREEN)).collect(Collectors.toList()));
+    
+        AndSpecification<Product> andSpecification = new AndSpecification<>(
+            new ColorSpecification(Color.BLUE), new SizeSpecialisation(Size.LARGE));
+
+        System.out.println("Blue and large objects");
+        filter.filter(products, andSpecification).forEach(System.out::println);;
     }
 }
