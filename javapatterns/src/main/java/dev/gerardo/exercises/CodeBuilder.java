@@ -1,11 +1,9 @@
 package dev.gerardo.exercises;
 
-import java.text.Format;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.javatuples.Pair;
 
 class Attribute {
   public String name;
