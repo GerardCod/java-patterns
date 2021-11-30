@@ -78,6 +78,6 @@ public class Demo {
     relations.addParentAndChild(parent, child1);
     relations.addParentAndChild(parent, child2);
 
-    Research research = new Research(relations);
+    new Research(relations);
   }
 }

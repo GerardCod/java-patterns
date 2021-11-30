@@ -22,16 +22,19 @@ class MultiFunctionPrinter implements Machine {
 
   @Override
   public void print(Document d) {
+    System.out.println("Doing something");
     
   }
 
   @Override
   public void fax(Document d) {
     
+    System.out.println("Doing something");
   }
 
   @Override
   public void scan(Document d) {
+    System.out.println("Doing something");
     
   }
 
@@ -41,7 +44,7 @@ class OldFashionPrinter implements Printer {
 
   @Override
   public void print(Document d) {
-    // TODO Auto-generated method stub
+    System.out.println("Doing something");
     
   }
 
@@ -51,14 +54,12 @@ class PhotoCopier implements Printer, Scanner {
 
   @Override
   public void scan(Document d) {
-    // TODO Auto-generated method stub
-    
+    System.out.println("Doing something");
   }
-
+  
   @Override
   public void print(Document d) {
-    // TODO Auto-generated method stub
-    
+    System.out.println("Doing something");
   }
 
 }
