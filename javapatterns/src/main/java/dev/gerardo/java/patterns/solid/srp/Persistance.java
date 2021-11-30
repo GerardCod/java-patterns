@@ -1,4 +1,4 @@
-package dev.gerardo.java.patterns.solid;
+package dev.gerardo.java.patterns.solid.srp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,8 +15,6 @@ public class Persistance {
   }
 
   public Journal load(String filename) {
-    // TODO
-    
     return null;
   }
 

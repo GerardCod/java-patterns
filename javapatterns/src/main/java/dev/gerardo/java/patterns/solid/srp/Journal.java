@@ -1,7 +1,5 @@
-package dev.gerardo.java.patterns.solid;
+package dev.gerardo.java.patterns.solid.srp;
 
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
