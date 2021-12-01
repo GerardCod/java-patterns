@@ -26,11 +26,11 @@ abstract class Shape {
 
   protected Renderer renderer;
 
-  protected Shape() {
+  public Shape() {
 
   }
 
-  protected Shape(Renderer renderer) {
+  public Shape(Renderer renderer) {
     this.renderer = renderer;
   }
 
@@ -40,7 +40,7 @@ abstract class Shape {
 
 class Triangle extends Shape {
 
-  public Triangle (Renderer renderer) {
+  public Triangle(Renderer renderer) {
     super(renderer);
   }
 
@@ -57,7 +57,7 @@ class Triangle extends Shape {
 
 class Square extends Shape {
 
-  public Square (Renderer renderer) {
+  public Square(Renderer renderer) {
     super(renderer);
   }
 
@@ -73,6 +73,10 @@ class Square extends Shape {
 }
 
 class VectorSquare extends Square {
+  public VectorSquare(Renderer renderer) {
+    super(renderer);
+  }
+
   @Override
   public String toString() {
     return String.format("Drawing %s as %s", getName(), renderer.whatToRenderAs());
@@ -80,6 +84,10 @@ class VectorSquare extends Square {
 }
 
 class RasterSquare extends Square {
+  public RasterSquare(Renderer renderer) {
+    super(renderer);
+  }
+
   @Override
   public String toString() {
     return String.format("Drawing %s as %s", getName(), renderer.whatToRenderAs());
@@ -88,7 +96,8 @@ class RasterSquare extends Square {
 
 public class BridgeShapeDemo {
   public static void main(String[] args) {
-    System.out.println(new Square(new VectorRenderer()).toString());
-    System.out.println(new Triangle(new VectorRenderer()).toString());
+    Renderer render = new VectorRenderer();
+    System.out.println(new Square(render).toString());
+    System.out.println(new Triangle(render).toString());
   }
 }
