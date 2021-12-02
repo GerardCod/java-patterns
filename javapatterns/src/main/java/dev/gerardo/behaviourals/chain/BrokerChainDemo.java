@@ -129,7 +129,6 @@ class IncreaseDefenseModifierBroker extends CreatureModifierBroker implements Au
 
   @Override
   public void close() throws Exception {
-    // TODO Auto-generated method stub
     game.queries.unsubscribe(token);
   }
 
