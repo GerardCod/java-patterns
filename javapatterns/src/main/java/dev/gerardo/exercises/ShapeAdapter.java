@@ -20,7 +20,7 @@ interface Rectangle {
 
 class SquareToRectangleAdapter implements Rectangle {
   private Square square;
-  
+
   public SquareToRectangleAdapter(Square square) {
     this.square = square;
   }

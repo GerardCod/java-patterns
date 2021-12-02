@@ -1,4 +1,5 @@
-package dev.gerardo.exercises;
+package dev.gerardo.exercises.bridge;
+
 
 interface Renderer {
   String whatToRenderAs();
