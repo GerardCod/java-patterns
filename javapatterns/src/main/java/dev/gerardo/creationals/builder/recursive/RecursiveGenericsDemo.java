@@ -28,6 +28,7 @@ class PersonBuilder<SELF extends PersonBuilder<SELF>>
     return self();
   }
 
+  @SuppressWarnings("unchecked")
   protected SELF self()
   {
     // unchecked cast, but actually safe
